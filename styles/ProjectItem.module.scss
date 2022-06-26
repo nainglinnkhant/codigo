@@ -1,0 +1,92 @@
+@import './responsive';
+@import './animations';
+
+.project-item {
+    overflow: hidden;
+    height: 32.5vw;
+
+    @include tablet-landscape {
+        height: 42vw;
+    }
+
+    @include mobile {
+        height: 17.5rem;
+    }
+
+    &-link {
+        position: relative;
+        display: block;
+        height: 100%;
+
+        &:hover {
+            .project-item-image-container {
+                transform: scale(1.1);
+                filter: brightness(50%);
+            }
+
+            .contrast-text {
+                color: #fff;
+            }
+        }
+    }
+
+    &-image-container {
+        position: relative;
+        height: 100%;
+        transition: all 0.8s cubic-bezier(0.4, 0.6, 0.6, 1);
+        animation: fadeOutIn 0.8s cubic-bezier(0.4, 0.6, 0.6, 1);
+    }
+
+    &-image {
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #fff;
+
+        > div {
+            padding: 1.875rem;
+        }
+
+        p {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .contrast-text {
+            color: #000;
+            transition: color 0.8s ease-out;
+        }
+    }
+
+    &-platforms {
+        display: flex;
+        padding: 1.875rem;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: relative;
+            background-color: #fff;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

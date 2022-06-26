@@ -1,0 +1,120 @@
+@import './variables';
+@import './responsive';
+@import './animations';
+
+.work-header {
+    padding-top: 12vh;
+    width: 75%;
+    margin: auto;
+    animation: fadeInUp 1.95s cubic-bezier(0.2, 1, 0.3, 1) 0.2s backwards;
+
+    @include tablet-landscape {
+        width: 85%;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 700;
+        font-size: 3.75rem;
+        line-height: 5rem;
+
+        @include tablet-landscape {
+            font-size: 6.5vw;
+            line-height: 4.2rem;
+        }
+
+        @include mobile {
+            font-size: 13vw;
+            line-height: 4.3rem;
+        }
+    }
+
+    h3 {
+        color: $primary-color;
+    }
+}
+
+.work-categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.work-categories {
+    flex-basis: 80%;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile-large {
+        flex-basis: 100%;
+    }
+
+    li {
+        position: relative;
+        padding: 10px 25px 10px 0;
+
+        &:first-child {
+            padding-left: 25px;
+            font-weight: 800;
+        }
+
+        &:first-child::before {
+            content: '';
+            width: 16px;
+            height: 2px;
+            background: $primary-color;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            display: inline-block;
+        }
+    }
+
+    a {
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.work-legend {
+    flex-basis: 20%;
+    align-self: flex-end;
+
+    @include mobile-large {
+        flex-basis: auto;
+        margin-top: 3.5rem;
+        width: 12.5rem;
+    }
+
+    h4 {
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.4rem 0 0.4rem 1.25rem;
+    border-left: 1px solid #000;
+}
+
+.legend-item {
+    display: flex;
+    height: 1.75rem;
+    align-items: center;
+
+    p {
+        font-size: 10px;
+        margin-left: 0.625rem;
+    }
+}
