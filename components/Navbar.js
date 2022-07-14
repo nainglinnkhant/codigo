@@ -98,7 +98,7 @@ export default function Navbar() {
                         </li>
 
                         <li>
-                            <Link href='/'>Let's chat</Link>
+                            <Link href='/'>Let&apos;s chat</Link>
                         </li>
 
                         <li className='flex justify-center mt-12'>

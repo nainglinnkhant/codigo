@@ -13,6 +13,8 @@ export default function ProjectItem({ project, link = '#' }) {
     return (
         <div className={`${span} ${styles['project-item']}`}>
             <a href={link} className={styles['project-item-link']}>
+                <div className={styles.overlay}></div>
+
                 <div className={styles['project-item-image-container']}>
                     <img
                         src={`/${project.image}.jpg`}
