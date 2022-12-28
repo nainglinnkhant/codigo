@@ -8,7 +8,7 @@ import styles from '../styles/WorkHeader.module.scss'
 export default function WorkHeader() {
     return (
         <div className={styles['work-header']}>
-            <h1>Here's 5% of</h1>
+            <h1>Here&#39;s 5% of</h1>
             <h2>our published work.</h2>
             <h3>See 100% of our power.</h3>
 
