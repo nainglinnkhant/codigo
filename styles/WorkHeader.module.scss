@@ -3,13 +3,17 @@
 @import './animations';
 
 .work-header {
-    padding-top: 12vh;
+    padding-top: 20vh;
     width: 75%;
     margin: auto;
     animation: fadeInUp 1.95s cubic-bezier(0.2, 1, 0.3, 1) 0.2s backwards;
 
     @include tablet-landscape {
         width: 85%;
+    }
+
+    @include tablet {
+        padding-top: 30vh;
     }
 
     h1,
