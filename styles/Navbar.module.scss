@@ -13,8 +13,11 @@
     z-index: 10;
     animation: fadeInDown 0.75s 0.3s both;
 
-    @include tablet {
+    @include tablet-landscape {
         padding: 1.7rem 1.25rem;
+    }
+
+    @include tablet {
         position: fixed;
     }
 

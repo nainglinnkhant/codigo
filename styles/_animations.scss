@@ -39,3 +39,37 @@
         transform: translateZ(0) scaleX(1) rotate3d(0, 0, 0, 0);
     }
 }
+
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.25) translateY(50px);
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.25) translateY(0);
+    }
+}
+
+@keyframes circleScaleUp {
+    0% {
+        transform: scale3d(0, 0, 1);
+        border-radius: 43% 57% 56% 44%/55% 40% 60% 45%;
+    }
+    5% {
+        transform: scale3d(0, 0, 1);
+    }
+    30% {
+        border-radius: 43% 57% 47% 53%/46% 46% 54% 54%;
+    }
+    70% {
+        border-radius: 49% 51% 43% 57%/55% 48% 52% 45%;
+    }
+    100% {
+        transform: scaleX(1);
+        border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    }
+}

@@ -11,7 +11,7 @@ export default function ProjectItem({ project, link = '#' }) {
     const span = `col-span-${project.span}`
 
     return (
-        <a href={link} className={`${span} ${styles['project-item-link']}`}>
+        <a href='work-detail' className={`${span} ${styles['project-item-link']}`}>
             <div className={styles.overlay}></div>
 
             <img
